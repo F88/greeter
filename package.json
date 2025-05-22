@@ -1,6 +1,6 @@
 {
   "name": "@msn088/greeter",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Public scoped packages for operation verification purposes.",
   "type": "module",
   "keywords": [
