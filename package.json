@@ -18,8 +18,11 @@
     "node": ">= 22.11"
   },
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "exports": {
-    ".": "./dist/index.js"
+    ".": {
+      "import": "./dist/index.js"
+    }
   },
   "scripts": {
     "clean": "rimraf dist coverage",

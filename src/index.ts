@@ -1,3 +1,5 @@
+export * from './greet.js';
+
 /**
  * Exported constant representing a name.
  * @constant {string} NAME - The string value 'NAME'
