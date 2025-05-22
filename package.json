@@ -8,7 +8,10 @@
     "typescript"
   ],
   "homepage": "https://github.com/F88/greeter",
-  "repository": "github:F88/greeter",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/F88/greeter.git"
+  },
   "bugs": {
     "url": "https://github.com/F88/greeter/issues"
   },
