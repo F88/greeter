@@ -22,7 +22,6 @@
     ".": "./dist/index.js"
   },
   "scripts": {
-    "start": "node dist/src/main.js",
     "clean": "rimraf dist coverage",
     "prebuild": "npm run lint",
     "build": "tsc --project tsconfig.json",
