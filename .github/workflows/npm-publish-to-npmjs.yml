@@ -44,3 +44,7 @@ jobs:
       - run: npm --loglevel silly publish --dry-run --registry https://registry.npmjs.org
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+      - run: npm --loglevel silly publish --registry https://registry.npmjs.org
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

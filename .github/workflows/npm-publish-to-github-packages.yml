@@ -47,3 +47,7 @@ jobs:
       - run: npm --loglevel silly publish --dry-run --registry https://npm.pkg.github.com
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - run: npm --loglevel silly publish --registry https://npm.pkg.github.com
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
