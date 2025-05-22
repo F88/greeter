@@ -1,0 +1,63 @@
+{
+  "name": "@msn088/greeter",
+  "version": "1.0.0",
+  "description": "Public scoped packages for operation verification purposes.",
+  "type": "module",
+  "keywords": [
+    "nodejs",
+    "typescript"
+  ],
+  "homepage": "https://github.com/F88/greeter",
+  "repository": "github:F88/greeter",
+  "bugs": {
+    "url": "https://github.com/F88/greeter/issues"
+  },
+  "author": "F88 <685250+F88@users.noreply.github.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 22.11"
+  },
+  "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "clean": "rimraf dist coverage",
+    "prebuild": "npm run lint",
+    "build": "tsc --project tsconfig.json",
+    "build:release": "npm run clean && tsc --project tsconfig.release.json",
+    "format": "npm run prettier:write",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:bitbucket-pipeline": "vitest --reporter=default --reporter=junit --outputFile.junit=test-results/junit-report.xml",
+    "prettier:check": "prettier --check \"{src,test,scripts}/**/*.{js,json,mjs,ts}\" \"*.{md,json,ts}\"",
+    "prettier:write": "prettier --write \"{src,test,scripts}/**/*.{js,json,mjs,ts}\" \"*.{md,json,ts}\""
+  },
+  "devDependencies": {
+    "@eslint/js": "~9.27",
+    "@types/node": "~22",
+    "@typescript-eslint/parser": "~8.32",
+    "@vitest/coverage-v8": "~3.1",
+    "@vitest/eslint-plugin": "~1.2",
+    "eslint": "~9.27",
+    "eslint-config-prettier": "~10.1",
+    "prettier": "~3.5",
+    "rimraf": "~6.0",
+    "typescript": "~5.8",
+    "typescript-eslint": "~8.32",
+    "vitest": "~3.1"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "private": false,
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com/"
+  }
+}
