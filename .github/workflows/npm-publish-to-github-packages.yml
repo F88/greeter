@@ -32,10 +32,18 @@ jobs:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
-      # - run: npm --loglevel silly list
       - run: npm --loglevel verbose list
+
       - run: npm run build:release
-      # - run: npm --loglevel silly publish
-      - run: npm --loglevel verbose publish
+
+      - run: npm config list
+
+      #- run: npm --loglevel verbose publish
+      # - run: npm --loglevel verbose publish --dry-run
+      - run: npm --loglevel silly publish --dry-run
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - run: npm --loglevel silly publish --dry-run --registry https://npm.pkg.github.com
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
