@@ -11,6 +11,6 @@ export type GreetSpec = {
  * @returns A formatted greeting string, like "Hello!!!, World!".
  */
 export function greet(spec?: GreetSpec): string {
-  const { shout = 'Hello', whom = 'World' } = spec || {};
+  const { shout = '😺Hello', whom = 'World' } = spec || {};
   return `${shout}!!!, ${whom}!`;
 }

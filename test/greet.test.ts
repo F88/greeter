@@ -3,7 +3,7 @@ import { greet } from '../src/greet.js';
 
 describe('greet', () => {
   it('should return "Hello!!!, World!" when called with no arguments', () => {
-    expect(greet()).toBe('Hello!!!, World!');
+    expect(greet()).toBe('😺Hello!!!, World!');
   });
 
   it('should use custom shout if provided', () => {
@@ -11,7 +11,7 @@ describe('greet', () => {
   });
 
   it('should use custom whom if provided', () => {
-    expect(greet({ whom: 'Copilot' })).toBe('Hello!!!, Copilot!');
+    expect(greet({ whom: 'Copilot' })).toBe('😺Hello!!!, Copilot!');
   });
 
   it('should use both custom shout and whom if provided', () => {
@@ -19,7 +19,7 @@ describe('greet', () => {
   });
 
   it('should use default values when empty object is provided', () => {
-    expect(greet({})).toBe('Hello!!!, World!');
+    expect(greet({})).toBe('😺Hello!!!, World!');
   });
 
   it('should handle special characters in inputs', () => {
@@ -56,11 +56,11 @@ describe('greet', () => {
 
   it('should treat undefined parameters as default values', () => {
     expect(greet({ shout: undefined, whom: 'Friend' })).toBe(
-      'Hello!!!, Friend!',
+      '😺Hello!!!, Friend!',
     );
     expect(greet({ shout: 'Hi', whom: undefined })).toBe('Hi!!!, World!');
     expect(greet({ shout: undefined, whom: undefined })).toBe(
-      'Hello!!!, World!',
+      '😺Hello!!!, World!',
     );
   });
 });
