@@ -1,6 +1,6 @@
 export * from './greet.js';
 
-export const VERSION = '0.8.0';
+export const VERSION = '0.9.0';
 
 /**
  * Exported constant representing a name.
