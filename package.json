@@ -43,6 +43,7 @@
     "prettier:write": "prettier --write \"{src,test,scripts}/**/*.{js,json,mjs,ts}\" \"*.{md,json,ts}\""
   },
   "devDependencies": {
+    "@changesets/cli": "^2.29.4",
     "@eslint/js": "~9.27",
     "@types/node": "~22",
     "@typescript-eslint/parser": "~8.32",
