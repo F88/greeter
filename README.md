@@ -7,5 +7,4 @@
 
 [![install size](https://packagephobia.com/badge?p=@msn088/greeter)](https://packagephobia.com/result?p=@msn088/greeter)
 
-
 Public scoped packages for operation verification purposes.
