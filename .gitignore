@@ -237,6 +237,7 @@ coverage
 
 ## Test
 test-results/
+test-report.junit.xml
 
 ##
 dist/
