@@ -22,6 +22,9 @@ jobs:
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -37,14 +40,13 @@ jobs:
 
       #- run: npm --loglevel verbose publish
       # - run: npm --loglevel verbose publish --dry-run
-      - run: npm --loglevel silly publish --dry-run
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
       - run: npm --loglevel silly publish --dry-run --registry https://registry.npmjs.org
+      # - run: npm --loglevel silly publish --dry-run --provenance --access public --registry https://registry.npmjs.org
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
       - run: npm --loglevel silly publish --registry https://registry.npmjs.org
+      # - run: npm --loglevel silly publish --provenance --access public --registry https://registry.npmjs.org
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
