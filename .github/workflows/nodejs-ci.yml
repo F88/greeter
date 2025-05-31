@@ -33,7 +33,7 @@ jobs:
       #   run: npm run test
 
       - name: Run tests for Codecov Test Analytics
-        run: npm run test:codecov-test-analytics
+        run: npm run test:codecov
 
       - name: Upload test results to Codecov
         if: ${{ !cancelled() }}
