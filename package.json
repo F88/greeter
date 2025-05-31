@@ -38,7 +38,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
-    "test:bitbucket-pipeline": "vitest --reporter=default --reporter=junit --outputFile.junit=test-results/junit-report.xml",
+    "test:bitbucket-pipeline": "vitest run --reporter=default --reporter=junit --outputFile.junit=test-results/junit-report.xml",
+    "test:codecov": "vitest run --coverage --reporter=default --reporter=junit --outputFile.junit=test-report.junit.xml",
     "prettier:check": "prettier --check \"{src,test,scripts}/**/*.{js,json,mjs,ts}\" \"*.{md,json,ts}\"",
     "prettier:write": "prettier --write \"{src,test,scripts}/**/*.{js,json,mjs,ts}\" \"*.{md,json,ts}\""
   },
