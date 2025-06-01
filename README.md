@@ -7,6 +7,8 @@
 
 [![install size](https://packagephobia.com/badge?p=@msn088/greeter)](https://packagephobia.com/result?p=@msn088/greeter)
 
+[![codecov](https://codecov.io/gh/F88/greeter/graph/badge.svg?token=LXEBNTVCUL)](https://codecov.io/gh/F88/greeter)
+
 Public scoped packages for operation verification purposes.
 
 .
